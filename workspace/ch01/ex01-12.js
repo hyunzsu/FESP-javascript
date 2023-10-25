@@ -23,24 +23,24 @@ var arr2 = {
   push: function (el) {
     // 맨 뒤에 지정한 elem을 추가
     // length를 1 증가
-    arr2[arr2.length] = el;
-    arr2.length++;
+    this[this.length] = el;
+    this.length++;
   },
   shift: function (el) {
     // 첫번째 요소를 삭제하고 반환
     // length 1 감소
-    let first = arr2[0];
-    for (let i = 0; i < arr2.length - 1; i++) {
-      arr2[i] = arr2[i + 1];
+    let first = this[0];
+    for (let i = 0; i < this.length - 1; i++) {
+      this[i] = this[i + 1];
     }
-    arr2.length--;
+    this.length--;
     return first;
   },
   pop: function (el) {
     // 마지막 요소 삭제 후 반환
     // length 1 감소
-    let last = arr2[arr2.length - 1];
-    arr2.length--;
+    let last = this[this.length - 1];
+    this.length--;
     return last;
   },
 };
